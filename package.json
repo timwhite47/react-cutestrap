@@ -2,8 +2,9 @@
   "name": "react-cutestrap",
   "version": "1.0.0",
   "description": "Set of React Components for the Cutestrap CSS Framework.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "babel -d dist/ src/",
     "test": "mocha --compilers js:babel-register --require ./test/setup.js"
   },
   "author": "",
