@@ -5,15 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Button = exports.TextArea = exports.SubmitButton = exports.RadioButton = exports.Select = exports.CheckBox = exports.TextField = exports.Form = undefined;
 
-var _form = require('./src/form');
+var _form = require('./form');
 
 var _form2 = _interopRequireDefault(_form);
 
-var _check_box = require('./src/check_box');
+var _check_box = require('./check_box');
 
 var _check_box2 = _interopRequireDefault(_check_box);
 
-var _text_area = require('./src/text_area');
+var _text_area = require('./text_area');
 
 var _text_area2 = _interopRequireDefault(_text_area);
 
