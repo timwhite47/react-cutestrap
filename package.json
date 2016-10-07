@@ -1,0 +1,24 @@
+{
+  "name": "react-cutestrap",
+  "version": "1.0.0",
+  "description": "Set of React Components for the Cutestrap CSS Framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register --require ./test/setup.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-register": "^6.11.5",
+    "chai": "^3.5.0",
+    "enzyme": "^2.4.1",
+    "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.2.1"
+  }
+}
