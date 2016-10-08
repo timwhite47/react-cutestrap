@@ -45,15 +45,15 @@ var _grid = require('./grid');
 
 var _grid2 = _interopRequireDefault(_grid);
 
-var _module = require('module');
+var _column = require('./column');
 
-var _module2 = _interopRequireDefault(_module);
+var _column2 = _interopRequireDefault(_column);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.Text = _text2.default;
 exports.Grid = _grid2.default;
-exports.Column = _module2.default;
+exports.Column = _column2.default;
 exports.Form = _form2.default;
 exports.TextField = _text_field2.default;
 exports.CheckBox = _check_box2.default;

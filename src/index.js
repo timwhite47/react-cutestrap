@@ -8,7 +8,7 @@ import SubmitButton from './submit_button';
 import Button from './button';
 import Text from './text';
 import Grid from './grid';
-import Column from 'module';
+import Column from './column';
 
 export {
   Text,
