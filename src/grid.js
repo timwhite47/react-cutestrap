@@ -9,6 +9,7 @@ class Grid extends React.Component {
       'grid--medium': (size === 'medium'),
       'grid': !size,
     });
+
     return (
       <section className={className}>{children}</section>
     );
