@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -33,10 +37,15 @@ var Button = function (_React$Component) {
       var _props = this.props;
       var type = _props.type;
       var value = _props.value;
+      var className = _props.className;
+      var onClick = _props.onClick;
+
+      var cutestrapButtonType = 'btn--' + type;
+      var buttonClass = (0, _classnames2.default)(cutestrapButtonType, className);
 
       return _react2.default.createElement(
         'button',
-        { className: 'btn--' + type },
+        { className: buttonClass, onClick: onClick },
         value
       );
     }
@@ -46,6 +55,8 @@ var Button = function (_React$Component) {
 }(_react2.default.Component);
 
 Button.propTypes = {
+  className: _react2.default.PropTypes.any,
+  onClick: _react2.default.PropTypes.func,
   type: _react2.default.PropTypes.oneOf(['primary', 'secondary', 'link']),
   value: _react2.default.PropTypes.string
 };
