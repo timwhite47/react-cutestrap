@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = exports.TextArea = exports.SubmitButton = exports.RadioButton = exports.Select = exports.CheckBox = exports.TextField = exports.Form = exports.Column = exports.Grid = exports.Text = undefined;
+exports.Button = exports.TextArea = exports.SubmitButton = exports.RadioButton = exports.Select = exports.CheckBox = exports.TextField = exports.Form = exports.Column = exports.Grid = exports.Text = exports.Wrapper = undefined;
 
 var _form = require('./form');
 
@@ -49,8 +49,13 @@ var _column = require('./column');
 
 var _column2 = _interopRequireDefault(_column);
 
+var _wrapper = require('./wrapper');
+
+var _wrapper2 = _interopRequireDefault(_wrapper);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+exports.Wrapper = _wrapper2.default;
 exports.Text = _text2.default;
 exports.Grid = _grid2.default;
 exports.Column = _column2.default;

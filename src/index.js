@@ -9,8 +9,10 @@ import Button from './button';
 import Text from './text';
 import Grid from './grid';
 import Column from './column';
+import Wrapper from './wrapper';
 
 export {
+  Wrapper,
   Text,
   Grid,
   Column,
