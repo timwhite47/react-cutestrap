@@ -32,11 +32,13 @@ var Wrapper = function (_React$Component) {
   }
 
   _createClass(Wrapper, [{
-    key: 'className',
-    value: function className() {
-      var size = this.props.size;
+    key: 'sizeClassName',
+    value: function sizeClassName() {
+      var _props = this.props;
+      var size = _props.size;
+      var className = _props.className;
 
-      return (0, _classnames2.default)({
+      return (0, _classnames2.default)(className, {
         'wrapper': !size,
         'wrapper-small': size === 'small',
         'wrapper-large': size === 'large'
@@ -45,7 +47,17 @@ var Wrapper = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: this.className() });
+      var _props2 = this.props;
+      var children = _props2.children;
+      var className = _props2.className;
+
+      var sizeClass = this.sizeClassName();
+
+      return _react2.default.createElement(
+        'div',
+        { className: (0, _classnames2.default)(sizeClass, className) },
+        children
+      );
     }
   }]);
 
@@ -53,6 +65,8 @@ var Wrapper = function (_React$Component) {
 }(_react2.default.Component);
 
 Wrapper.propTypes = {
+  children: _react2.default.PropTypes.any,
+  className: _react2.default.PropTypes.string,
   size: _react2.default.PropTypes.oneOf(['large', 'small'])
 };
 
