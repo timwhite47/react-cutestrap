@@ -1,5 +1,5 @@
 import React from 'react';
-import TextField from '../src/text_field';
+import { TextField } from '../src';
 import { mount } from 'enzyme';
 import { expect } from 'chai';
 let wrapper;

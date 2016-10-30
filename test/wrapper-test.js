@@ -1,5 +1,5 @@
 import React from 'react';
-import Wrapper from '../src/wrapper';
+import { Wrapper } from '../src';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
 

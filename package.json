@@ -4,6 +4,7 @@
   "description": "Set of React Components for the Cutestrap CSS Framework.",
   "main": "dist/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "babel -d dist/ src/",
     "test": "mocha --compilers js:babel-register --require ./test/setup.js"
   },

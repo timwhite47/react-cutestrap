@@ -1,10 +1,11 @@
-import Button from '../src/button';
+import { Button } from '../src';
 import React from 'react';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
 import sinon from 'sinon';
 let wrapper;
 let onClick;
+
 describe('<Button />', function () {
   beforeEach(function () {
     onClick = sinon.spy();

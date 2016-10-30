@@ -1,13 +1,23 @@
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
-import Grid from '../src/grid';
+import { Grid } from '../src';
 import React from 'react';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
 let wrapper;
 
 describe('<Grid />', function () {
+  describe('className', function () {
+    beforeEach(function () {
+      wrapper = mount(<Grid className='custom-class' />);
+    });
+
+    it('has custom className', function () {
+      console.log(wrapper.debug());
+      expect(wrapper.find('section')).to.have.className('custom-class');
+    });
+  });
   context('default size', function () {
     beforeEach(function () {
       wrapper = mount(<Grid />);

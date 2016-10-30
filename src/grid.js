@@ -3,8 +3,8 @@ import cx from 'classnames';
 
 class Grid extends React.Component {
   render() {
-    const { size, children } = this.props;
-    const className = cx({
+    const { size, children, className: customClassName } = this.props;
+    const className = cx(customClassName, {
       'grid--large': (size === 'large'),
       'grid--medium': (size === 'medium'),
       'grid': !size,
@@ -18,6 +18,7 @@ class Grid extends React.Component {
 
 Grid.propTypes = {
   children: React.PropTypes.any,
+  className: React.PropTypes.string,
   size: React.PropTypes.oneOf(['large', 'medium']),
 };
 

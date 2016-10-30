@@ -1,7 +1,7 @@
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
-import Text from '../src/text';
+import { Text } from '../src';
 import React from 'react';
 import { expect } from 'chai';
 import { mount } from 'enzyme';

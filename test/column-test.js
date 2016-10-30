@@ -1,7 +1,7 @@
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
-import Column from '../src/column';
+import { Column } from '../src/';
 import React from 'react';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
