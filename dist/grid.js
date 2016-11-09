@@ -37,8 +37,9 @@ var Grid = function (_React$Component) {
       var _props = this.props;
       var size = _props.size;
       var children = _props.children;
+      var customClassName = _props.className;
 
-      var className = (0, _classnames2.default)({
+      var className = (0, _classnames2.default)(customClassName, {
         'grid--large': size === 'large',
         'grid--medium': size === 'medium',
         'grid': !size
@@ -57,6 +58,7 @@ var Grid = function (_React$Component) {
 
 Grid.propTypes = {
   children: _react2.default.PropTypes.any,
+  className: _react2.default.PropTypes.string,
   size: _react2.default.PropTypes.oneOf(['large', 'medium'])
 };
 
