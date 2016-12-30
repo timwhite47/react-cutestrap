@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -53,6 +57,11 @@ var Select = function (_React$Component2) {
   }
 
   _createClass(Select, [{
+    key: 'value',
+    value: function value() {
+      return this.select.value;
+    }
+  }, {
     key: '_renderOptions',
     value: function _renderOptions() {
       var options = this.props.options;
@@ -64,21 +73,27 @@ var Select = function (_React$Component2) {
   }, {
     key: 'render',
     value: function render() {
+      var _this3 = this;
+
       var _props = this.props;
       var className = _props.className;
       var label = _props.label;
 
+      var cName = (0, _classnames2.default)('select', className);
+
       return _react2.default.createElement(
         'label',
-        { className: className },
+        { className: cName },
         _react2.default.createElement(
           'select',
-          null,
+          { ref: function ref(_ref) {
+              _this3.select = _ref;
+            } },
           this._renderOptions()
         ),
         _react2.default.createElement(
           'span',
-          { className: 'select__label', htmlFor: className },
+          { className: 'select__label', htmlFor: 'select' },
           label
         )
       );

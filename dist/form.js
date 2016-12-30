@@ -39,6 +39,7 @@ var Form = function (_React$Component) {
       var onSubmit = _props.onSubmit;
       var onChange = _props.onChange;
 
+
       return _react2.default.createElement(
         'form',
         _extends({

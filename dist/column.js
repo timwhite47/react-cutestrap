@@ -36,6 +36,7 @@ var Column = function (_React$Component) {
     value: function weightClassName() {
       var weight = this.props.weight;
 
+
       return (0, _classnames2.default)({
         'column--light': weight === 'light',
         'column--heavy': weight === 'heavy'

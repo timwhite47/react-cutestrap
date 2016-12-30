@@ -34,6 +34,7 @@ var RadioButton = function (_React$Component) {
       var name = _props.name;
       var label = _props.label;
 
+
       return _react2.default.createElement(
         'label',
         { className: 'radio' },

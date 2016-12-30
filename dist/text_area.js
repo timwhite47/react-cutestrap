@@ -39,6 +39,7 @@ var TextArea = function (_React$Component) {
 
       var label = this.props.label;
 
+
       return _react2.default.createElement(
         'label',
         { className: 'textfield' },

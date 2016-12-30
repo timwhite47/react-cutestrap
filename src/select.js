@@ -1,5 +1,5 @@
 import React from 'react';
-
+import cx from 'classnames';
 class SelectOption extends React.Component {
   render() {
     const { option } = this.props;
@@ -8,18 +8,23 @@ class SelectOption extends React.Component {
 }
 
 class Select extends React.Component {
+  value() {
+    return this.select.value;
+  }
   _renderOptions() {
     const { options } = this.props;
     return options.map((option) => <SelectOption key={option} option={option} />);
   }
   render() {
     const { className, label } = this.props;
+    const cName = cx('select', className);
+
     return (
-      <label className={className}>
-        <select>
+      <label className={cName}>
+        <select ref={(ref) => { this.select = ref; }}>
           {this._renderOptions()}
         </select>
-        <span className='select__label' htmlFor={className}>{label}</span>
+        <span className='select__label' htmlFor='select'>{label}</span>
       </label>
     );
   }

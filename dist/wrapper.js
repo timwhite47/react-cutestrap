@@ -38,6 +38,7 @@ var Wrapper = function (_React$Component) {
       var size = _props.size;
       var className = _props.className;
 
+
       return (0, _classnames2.default)(className, {
         'wrapper': !size,
         'wrapper-small': size === 'small',
