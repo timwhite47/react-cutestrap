@@ -6,10 +6,10 @@ class TextField extends React.Component {
   }
 
   render() {
-    const { label, value } = this.props;
+    const { label, value, onChange  } = this.props;
     return (
       <label className='textfield'>
-        <input ref={(ref) => { this.input = ref; }} type='text' value={value} />
+        <input onChange={onChange} ref={(ref) => { this.input = ref; }} type='text' value={value}/>
         <span className='textfield__label'>{label}</span>
       </label>
     );
@@ -18,6 +18,7 @@ class TextField extends React.Component {
 
 TextField.propTypes = {
   label: React.PropTypes.string,
+  onChange: React.PropTypes.string,
   value: React.PropTypes.string,
 };
 

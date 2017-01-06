@@ -14,7 +14,6 @@ describe('<Grid />', function () {
     });
 
     it('has custom className', function () {
-      console.log(wrapper.debug());
       expect(wrapper.find('section')).to.have.className('custom-class');
     });
   });

@@ -12,8 +12,8 @@ describe('<Text />', function () {
       wrapper = mount(<Text>{"Hello World!"}</Text>);
     });
 
-    it('renders a normal <p /> tag', function () {
-      console.log(wrapper.debug());
+    it('renders with correct text', function () {
+      expect(wrapper).to.include.text('Hello World!')
     });
   });
 

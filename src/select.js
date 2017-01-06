@@ -2,8 +2,8 @@ import React from 'react';
 import cx from 'classnames';
 class SelectOption extends React.Component {
   render() {
-    const { option } = this.props;
-    return <option>{option}</option>;
+    const { option: {value, label} } = this.props;
+    return <option key={value} value={value}>{label}</option>;
   }
 }
 
@@ -13,7 +13,7 @@ class Select extends React.Component {
   }
   _renderOptions() {
     const { options } = this.props;
-    return options.map((option) => <SelectOption key={option} option={option} />);
+    return options.map((option) => <SelectOption key={option.value} option={option} />);
   }
   render() {
     const { className, label } = this.props;
@@ -31,7 +31,7 @@ class Select extends React.Component {
 }
 
 SelectOption.propTypes = {
-  option: React.PropTypes.string,
+  option: React.PropTypes.object,
 };
 
 Select.propTypes = {

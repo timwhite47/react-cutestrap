@@ -5,11 +5,11 @@ class TextArea extends React.Component {
     return this.textarea.value;
   }
   render() {
-    const { label } = this.props;
+    const { label, onChange } = this.props;
 
     return (
       <label className='textfield'>
-        <textarea ref={(ref) => { this.textarea = ref; }}/>
+        <textarea onChange={onChange} ref={(ref) => { this.textarea = ref; }}/>
         <span className='textfield__label'>{label}</span>
       </label>
     );
@@ -18,6 +18,7 @@ class TextArea extends React.Component {
 
 TextArea.propTypes = {
   label: React.PropTypes.string,
+  onChange: React.PropTypes.func,
 };
 
 export default TextArea;
