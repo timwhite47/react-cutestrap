@@ -18,4 +18,14 @@ describe('<TextField />', () => {
     const inputWrapper = wrapper.find('span.textfield__label');
     expect(inputWrapper.text()).to.equal('Name');
   });
+
+  describe('value()', function () {
+    beforeEach(function () {
+      wrapper.find('input').simulate('change', { target: { value: 'some_text_value' } });
+    });
+
+    it.only('has correct value', function () {
+      console.log(wrapper.instance().value);
+    });
+  });
 });
