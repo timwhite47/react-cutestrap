@@ -23,6 +23,14 @@ Presentational components for the Cutestrap CSS Framework.
 
 ##### Radio Button
 
+```javascript
+  <RadioButton
+    label="Option A"
+    onChange={() => console.log("Option A Selected")}
+    name="option"
+  />
+```
+
 ##### Select
 
 ##### TextArea
