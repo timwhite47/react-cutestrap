@@ -18,7 +18,7 @@ class TextField extends React.Component {
 
 TextField.propTypes = {
   label: React.PropTypes.string,
-  onChange: React.PropTypes.string,
+  onChange: React.PropTypes.func,
   value: React.PropTypes.string,
 };
 
