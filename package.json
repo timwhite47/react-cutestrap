@@ -1,6 +1,6 @@
 {
   "name": "react-cutestrap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Set of React Components for the Cutestrap CSS Framework.",
   "main": "dist/index.js",
   "scripts": {
